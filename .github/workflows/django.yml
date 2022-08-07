@@ -18,7 +18,8 @@ jobs:
         python-version: 3.9
     - name: Install Dependencies
       run: |
-        pip install -r forward/requirements.txt
-    - name: Run Tests
-      run: |
-        python manage.py test
+        ls
+    #   pip install -r forward/requirements.txt
+    #- name: Run Tests
+    #  run: |
+    #    python manage.py test
