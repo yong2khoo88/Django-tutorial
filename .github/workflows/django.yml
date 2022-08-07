@@ -16,10 +16,10 @@ jobs:
       uses: actions/setup-python@v3
       with:
         python-version: 3.9
-    - name: Install Dependencies
-      run: |
-        pip install --upgrade pip
-        pip install -r requirements.txt
+    #- name: Install Dependencies
+      #run: |
+        #pip install --upgrade pip
+        #pip install -r requirements.txt
     - name: Run Tests
       run: |
         python manage.py test
@@ -28,5 +28,7 @@ jobs:
       uses: digitalocean/action-doctl@v2
       with:
         token: ${{ secrets.DO_ACCESS_TOKEN }}
+    - name: List droplet
+      run: doctl compute droplet list
     #- name: Update DigitalOcean App Platform
     #  run: doctl apps update ${{ secrets.DO_APP_ID }} --spec app.yaml
