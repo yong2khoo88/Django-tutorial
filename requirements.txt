@@ -12,13 +12,13 @@ packaging==21.3
 pandas==1.4.3
 Pillow==9.2.0
 plotly==5.9.0
-psycopg2 @ file:///Users/builder/ci_310/psycopg2_1642535040511/work
+psycopg2==2.9.3
 pyparsing==3.0.9
 python-dateutil==2.8.2
-pytz @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_1caf090c-01b6-4973-adac-d2eb884a674e7zonb9eb/croots/recipe/pytz_1654762641285/work
+pytz==2022.1
 scipy==1.9.0
 seaborn==0.11.2
 six==1.16.0
 sqlparse==0.4.2
 tenacity==8.0.1
-typing_extensions @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_ff5_5nqr6l/croots/recipe/typing_extensions_1659638832447/work
+typing_extensions==4.3.0
