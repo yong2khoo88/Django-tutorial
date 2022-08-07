@@ -20,9 +20,9 @@ jobs:
       #run: |
         #pip install --upgrade pip
         #pip install -r requirements.txt
-    - name: Run Tests
-      run: |
-        python manage.py test
+    #- name: Run Tests
+    #  run: |
+    #    python manage.py test
     
     - name: Install doctl
       uses: digitalocean/action-doctl@v2
