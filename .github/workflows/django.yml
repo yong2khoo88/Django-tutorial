@@ -1,0 +1,34 @@
+name: Django CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python 
+      uses: actions/setup-python@v3
+      with:
+        python-version: 3.9
+    #- name: Install Dependencies
+      #run: |
+        #pip install --upgrade pip
+        #pip install -r requirements.txt
+    #- name: Run Tests
+    #  run: |
+    #    python manage.py test
+    
+    - name: Install doctl
+      uses: digitalocean/action-doctl@v2
+      with:
+        token: ${{ secrets.DO_ACCESS_TOKEN }}
+    - name: List droplet
+      run: doctl compute droplet list
+    #- name: Update DigitalOcean App Platform
+    #  run: doctl apps update ${{ secrets.DO_APP_ID }} --spec app.yaml
